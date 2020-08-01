@@ -50,6 +50,3 @@ function to_slug(str)
  
     return str;
 }
-function remove_datalist(){
-    document.getElementById("datalist-food").innerHTML = "";
-  }
