@@ -50,3 +50,11 @@ function to_slug(str)
  
     return str;
 }
+
+ async function getRecipes(){
+     let response = await fetch("https://5f256502c85de2001629306a.mockapi.io/api/v1/recipes");
+     let recipes = await response.json();
+         console.log(recipes);
+ } 
+ getRecipes();
+ 

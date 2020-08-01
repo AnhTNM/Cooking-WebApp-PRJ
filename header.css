@@ -6,6 +6,9 @@
 #total{
     width: 100vw;
 }
+.total-news{
+    height: 400px;
+}
 .header{
     position: fixed;
     top: 0;
