@@ -1,4 +1,4 @@
-let input = document.getElementById("input-material");
+let input0ne = document.getElementById("input-material");
 let button = document.getElementById("delete-material");
 let addMaterial = document.getElementById("add-material");
 let material = document.getElementById("material");
@@ -42,14 +42,13 @@ let stepFood=document.getElementById("step-food");
 saveData.addEventListener("click",function(){
         const listArray = 'array';
         const array = {
-            ten:nameFood.value,
-            thongtin:shareinfo.value,
-            khauphan:people.value,
-            thoigian:time.value,
-            thanhphan:ingredientFood.value,
-            buoc:stepFood.value,
+            name:nameFood.value,
+            description:shareinfo.value,
         }
     localStorage.setItem(listArray,JSON.stringify(array))
+    foodData.unshift(array);
+    window.location.assign('home.html')
+    console.log(foodData);
     });
 
 
@@ -68,11 +67,20 @@ function encodeImageFileAsURL(element) {
     var file = element.files[0];
     var reader = new FileReader();
     reader.onloadend = function() {
-    let imgUrl=reader.result;
-    let image=document.getElementById("add-img")
+        let imgUrl=reader.result;
+        let image=document.getElementById("add-img")
+        localStorage.setItem("img",imgUrl);
+        dataCurrent = localStorage.getItem("array");
+        let dataConvert = JSON.parse(dataCurrent);
+        console.log(dataConvert);
+        dataConvert.img = imgUrl;
+       localStorage.setItem("data", JSON.stringify(dataConvert));   
+       foodData.unshift();
+        
         image.innerHTML+=`<img class="img" src="${imgUrl}">
         <button class="button-img" onclick="delete_item(this)"><i class="fas fa-trash"></button>`
     }
     reader.readAsDataURL(file);
   }
+
 
