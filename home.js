@@ -109,8 +109,8 @@ const foodData = [{
 
 
 
-const onclickReaction = (e) => {
-    console.log(e)
+const onclickReaction = () => {
+    console.log("3")
 
 }
 
@@ -164,9 +164,13 @@ renderFood()
 
 
 // Chuyển hướng
-function assign(){
+function pageChange(){
     window.location.assign('food.html');
 }
+function assign(){
+    window.location.assign('detail.html');
+}
+
 
 var btn = document.getElementById("btn");
 var input = document.getElementById("inp");
@@ -175,5 +179,6 @@ btn.addEventListener('click', ()=> {
     const value = input.value;
     console.log(value);
      localStorage.setItem('value',value);
-     assign();
-})
+     pageChange();
+     
+    })

@@ -7,7 +7,7 @@ const foodData = [
     {
         name: "Bánh tôm hùm Luke",
         description: "Đây là bánh cuốn",
-        img: "./cook/b.jpg"
+        img: "./cook/b.jpg",
     },
     
     {
@@ -92,14 +92,16 @@ const foodData = [
     {
         name: "Xôi cốm hạt sen",
         description: "Đây là bánh cuốn",
-        img: "./cook/xoi-com.jpg"
+        img: "./cook/xoi-com.jpg",
+        id : 2
     },
     
     
     {
         name: "Cánh gà chiên bơ tỏi",
         description: "Đây là bánh cuốn",
-        img: "./cook/ga.jpg"
+        img: "./cook/ga.jpg",
+        id : 0,
     },
     
 
@@ -115,7 +117,7 @@ function renderFood(foods){
         body.innerHTML+= `
         <div class='body_wrapper'>
             
-        <div class = 'body_wrapper_content'>
+        <div class = 'body_wrapper_content' id ="clickChange">
             <h2 >${foods[i].name}</h2>
             <p>${foods[i].description}</p>
         </div>
@@ -125,6 +127,7 @@ function renderFood(foods){
     }
 }
 renderFood(foodData)
+
 
 
 
@@ -146,7 +149,6 @@ searchForm.addEventListener('submit',(e)=> {
 })
 
 var getValue = localStorage.getItem('value');
-console.log(getValue);
 function search(getValue){
 
     var searchResult = [];
@@ -156,8 +158,31 @@ function search(getValue){
             }
         }
         renderFood(searchResult);
+        if   (searchResult[0].name.indexOf("Cánh") > - 1){
+  
+            var setId = localStorage.setItem("id", 0);
+         }
+         if (searchResult[0].name.indexOf("Xôi") > - 1){
+  
+            var setId = localStorage.setItem("id", 1);
+         }else if (searchResult[0].name.indexOf("Beef") > - 1){
+            var setId = localStorage.setItem("id", 2);
+         }
+         
 }
 search(getValue);
+
+var clickChange = document.getElementById('clickChange');
+
+clickChange.addEventListener("click", () => {
+    window.location.assign('detail.html');
+})
+
+
+
+
+
+
 
 
 
