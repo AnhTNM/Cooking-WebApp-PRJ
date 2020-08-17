@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./page-dt.css">
+<link rel="stylesheet" href="./header-dt.css">
+<link href="https://fonts.googleapis.com/css2?family=Chilanka&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Slab&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Slab:wght@200;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8b65afaf94.js" crossorigin="anonymous"></script>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="shadow-sm sticky">
+        <div class="main-header">
+            <div class="header-logo cs-p">
+                <img src="./cook/re.png" class="icon-logo" alt="">
+                <span class="text-logo">Foodie Recipes</span>
+            </div>
+            <form action="" class="header-search">
+                <div class="search-box">
+                <input type="text" name="box" class="input-search" placeholder="Tên món, nguyên liệu, bạn bếp, chủ đề,...">
+                <button class="btn-search cs-p" title="Tìm kiếm" type="submit">
+                    <i class="fas fa-fire-alt"></i>
+                </button>
+            </div>
+            </form>
+            <div class="header-controls">
+                <div class="ct cs-p">
+                    <a class="header-controls-links">
+                        <span class="text-fun">Khám phá</span>
+                        <i class="fas fa-utensils"></i>
+                    </a>
+                </div>
+                <div class="ct cs-p">
+                    <a  class="header-controls-links">
+                        <span class="text-fun">Viết món mới</span>
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
+                </div>
+                <div class="ct cs-p">
+                    <a  class="header-controls-links">
+                        <span class="text-fun">Chọn món</span>
+                        <i class="far fa-comment-alt"></i>
+                    </a>
+                </div>
+                <div class="ct cs-p">
+                    <a  class="header-controls-links">
+                        <span class="text-fun">doanvu111</span>
+                        <i class="fas fa-person-booth"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div class="main-ic sticky-1">
+        <div class="page-icon">
+            <div id="action-page" class="shadow-sm cs-p">
+                <a class="ac-icon">
+                    <i class="far fa-clipboard"></i>
+                </a>
+                <a  class="ac-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a  class="ac-icon">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                <a  class="ac-icon">
+                    <i class="far fa-arrow-alt-circle-up"></i>
+                </a>
+                <a  class="ac-icon">
+                    <i class="fas fa-print"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main-container">
+        <div id="page">
+            <!-- Name-recipe -->
+            <div id="title-imgg">     
+            </div>
+            <div class="name-recipe pd">
+                <div id="name-rec">
+
+                </div>
+                <div id="main-txt">
+                
+                </div>
+            </div>
+            
+
+            <!-- User -->
+            <div class="user pd">
+                <img src="https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-1/c0.326.960.960a/p960x960/93674913_2565426793723959_6791824006426132480_o.jpg?_nc_cat=100&_nc_sid=dbb9e7&_nc_ohc=bP1fo7nXKIoAX9JeHsm&_nc_ht=scontent-hkt1-1.xx&oh=6abfff71ddd517e801b5cd807c04cbd8&oe=5F54CF2E" class="user-img" alt="">
+                <div>
+                    <p class="name-user">Ánh Phùng</p>
+                <span class="in">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Phu Tho City
+                </span>
+            </div>
+            </div>
+            <hr>
+            <div id="time"> </div>
+            <hr>
+
+            <!-- Ingredients -->
+            <div class="ingredients pd">
+                <h1 class="name-idt ft">Nguyên Liệu</h1>
+                <div id="kp"></div>
+                <div class="main-idt txt pd">
+                    <ul id="add-ingre">
+
+                </ul>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Steps -->
+            <div class="steps pd">
+                <h1 class="step-name ft">Các Bước</h1>
+                
+                <div>
+                    <div class="step pd">
+                        <ol id="number-list" class="txt">
+                            
+                        </ol>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <hr>
+
+            <!-- Add-rec -->
+            <div class="page-user pd">
+                <img src="https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-1/c0.326.960.960a/p960x960/93674913_2565426793723959_6791824006426132480_o.jpg?_nc_cat=100&_nc_sid=dbb9e7&_nc_ohc=bP1fo7nXKIoAX9JeHsm&_nc_ht=scontent-hkt1-1.xx&oh=6abfff71ddd517e801b5cd807c04cbd8&oe=5F54CF2E" class="user-img" alt="">
+                <a class="p-txt">Lên sóng bởi</a>
+                <div class="name-user-2">Ánh Phùng</div>
+                <a class="p-txt">vào 1 tháng 8 năm 2020</a>
+                <div class="kb cs-p">Kết bạn bếp</div>
+                <div id="myModal-2" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="text-he">Foodie Recipes</h1>
+                        </div>
+                        <div class="modal-body modal-body-1">
+                            <h2 class="text-he2">Đã kết bạn bếp với đầu bếp hiện tại</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Comment -->
+            <div class="main-comment pd">
+                <h1 class="tit-cmt ft">Bình luận</h1>
+                <div class="comment pd">
+                    <img src="https://assets-global.cpcdn.com/assets/guest_user-9668e1190ab58cd58d666d5934e79c79da2e02f4421a6ed9abc4b163da97d6e7.png" class="cmt-cook" alt="">
+                    <form id="form-cmt" action="">
+                        <div class="box"> 
+                            <input type="text" class="in-cmt" name="comment" placeholder="Thêm bình luận...">
+                            <button class="btn-cmt cs-p"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div id="in-cmt-user" class="pd"></div>
+            </div>
+            <hr>
+
+            <!-- Groups -->
+            <div class="groups pd">
+                <div class="tits-h">
+                    <h1 class="tit-cmt ft">Cộng đồng</h1>
+                    <h2 class="ft">Câu hỏi</h2>
+                </div>
+                <div class="qs-gr">
+                    <p class="cmt-gr">Cộng đồng Foodie Recipes luôn sẵn sàng chia sẻ kinh nghiệm nấu món này với bạn!</p>
+                </div>
+                <div class="btn-qs">
+                    <button id="btn-modal" class="btn-qs-r2 cs-p">Đặt câu hỏi</button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="close">&times;</span>
+                                <h1>Đặt câu hỏi</h1>
+                            </div>
+                            <div class="modal-body">
+                                <p class="text-mod">Mọi thắc mắc của bạn cho món này sẽ được tác giả và cộng đồng giải đáp</p>
+                                <input type="text" class="in-ques" placeholder="Viết câu hỏi của bạn ở đây...">
+                                <span class="icon-modal"><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="practice pd">
+                <h1 class="tit-pr tit-cmt ft">Hình thực hành </h1>
+                <ul></ul>
+                <div class="qs-pr">
+                    <p class="cmt-gr">
+                        Hãy giới thiệu món này đến mọi người bằng cách gửi hình Thực Hành cho món nhé!
+                    </p>
+                </div>
+                <div class="btn-qs">
+                    <button class="btn-qs-r2 cs-p">Chụp ảnh</button>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Mon Khac -->
+            <div class="new-rec-main pd">
+                <div class="name-new-rec">
+                    <p class="p-new ft">Món mới của Lê Ly</p>
+                </div>
+                <div class="main-pic">
+                <div class='pic-new'>
+                    <img class = 'pic_img'src="./cook/n.jpg" alt="">
+                    <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
+                    <div class="txt-new">
+                        <h3>Bông lan Castella</h3>
+                        <div><p>Time: 7.pm - 8.pm </p></div>
+                        <div><p>Always Fresh</p></div>
+                    </div>
+                    <div class="reaction">
+                        <i class="fas fa-comment"></i>
+                        <a>0</a>
+                        <i class="fas fa-heart"></i>
+                        <a>0</a>
+                    </div>
+                </div>
+                <div class='pic-new'>
+                    <img class = 'pic_img'src="https://img-global.cpcdn.com/recipes/304b9280d1231d76/751x532cq70/banh-muffins-m%E1%BA%B7n-recipe-main-photo.jpg" alt="">
+                    <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
+                    <div class="txt-new">
+                        <h3>Bánh muffins mặn</h3>
+                        <div><p>Time: 7.pm - 8.pm </p></div>
+                        <div><p>Always Fresh</p></div>
+                    </div>
+                    <div class="reaction">
+                        <i class="fas fa-comment"></i>
+                        <a>0</a>
+                        <i class="fas fa-heart"></i>
+                        <a>0</a>
+                    </div>
+                </div>
+                <div class='pic-new'>
+                    <img class = 'pic_img'src="https://img-global.cpcdn.com/recipes/350ca849531c9822/400sq70/photo.jpg" alt="">
+                    <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
+                    <div class="txt-new">
+                        <h3>Cà phê dừa</h3>
+                        <div><p>Time: 7.pm - 8.pm </p></div>
+                        <div><p>Always Fresh</p></div>
+                    </div>
+                    <div class="reaction">
+                        <i class="fas fa-comment"></i>
+                        <a>0</a>
+                        <i class="fas fa-heart"></i>
+                        <a>0</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="rec-tag" style="width: 100%; height: 100px;">
+                <div style="font-size: 25px;">Tag:</div>
+            <a href="" class="tit-tag">#Khoai Tây</a>
+            <a href="" class="tit-tag">#Bông Lan</a>
+            <a href="" class="tit-tag">#Cánh gà</a>
+            </div>
+        </div>
+</div>
+
+<script src="./add-rec.js"></script>
+</body>
+</html>
