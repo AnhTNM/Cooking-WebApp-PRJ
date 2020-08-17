@@ -160,7 +160,7 @@ function renderFood(){
 
 renderFood()
 
-
+console.log("ádsa");
 
 
 // Chuyển hướng
