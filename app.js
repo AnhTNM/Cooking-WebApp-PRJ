@@ -84,4 +84,3 @@ function encodeImageFileAsURL(element) {
   }
 
 
-console.log("abc");

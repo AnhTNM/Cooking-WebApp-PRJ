@@ -1,7 +1,7 @@
 
 
 var arrUser = [{
-    name: "Trần Vũ",
+    name: "Minh Anh",
     img: "https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-9/117039274_2800143570220157_8092088375204193952_n.jpg?_nc_cat=101&_nc_sid=85a577&_nc_ohc=5FUCe-mo6zwAX8yK-DJ&_nc_ht=scontent.fhan5-5.fna&oh=ea2f7e095e3b72e0994fb07200a2739b&oe=5F5492B5",
 }]
 
@@ -20,6 +20,10 @@ const numberList = document.getElementById('number-list');
 const mainForm = document.getElementById('form-cmt');
 const cmtUser = document.getElementById('in-cmt-user');
 const time = document.getElementById("time");
+const userUp = document.getElementById("user-up");
+const userUp2 = document.getElementById("page-user2");
+const picNew = document.getElementById("pic-new2");
+
 
 
 async function getData(n) {
@@ -34,6 +38,21 @@ async function getData(n) {
     //Add tits ở dưới
     const text = data[n].tits;
     txt.innerHTML += `<p class="txt">${text}</p>`
+    //Add thông tin user
+    userUp.innerHTML += `<img src="${data[n].userImg}" class="user-img" alt="">
+    <div>
+        <p class="name-user">${data[n].userName}</p>
+    <span class="in">
+        <i class="fas fa-map-marker-alt"></i>
+        ${data[n].userLoca}
+    </span>
+</div>`
+//Add thong tin user duoi
+userUp2.innerHTML += ` <img src="${data[n].userImg}" class="user-img" alt="">
+<a class="p-txt">Lên sóng bởi</a>
+<div class="name-user-2">${data[n].userName}</div>
+<a class="p-txt">vào 1 tháng 8 năm 2020</a>
+<div class="kb cs-p" onclick="addFr()">Kết bạn bếp</div>`
     //Time
     const tim = data[n].time;
     time.innerHTML += `<i class="far fa-clock"></i>
@@ -84,17 +103,44 @@ async function getData(n) {
          `
         }
     }  
+
+    //Món khác của USer
+    picNew.innerHTML = ``
+    const checkName = data[n].userName;
+    for(let i = 0; i < data.length; i++){
+        if(data[i].userName == checkName && data[i].name != name){
+
+            picNew.innerHTML += `<div class='pic-new'>
+            <img class = 'pic_img'src="${data[i].img}" alt="">
+            <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
+            <div class="txt-new">
+                <h3 class="name33 cs-p">${data[i].name}</h3>
+                <div class="name44"><p>Time: ${data[i].time}</p>
+                <p>Dành cho ${data[i].kp}</p></div>
+            </div>
+            <div class="reaction">
+                <i class="fas fa-comment"></i>
+                <a>0</a>
+                <i class="fas fa-heart"></i>
+                <a>0</a>
+            </div>
+        </div>`
+        }
+    }
 }
 const n = localStorage.getItem('id');
 getData(n);
 
-//Comment
 
+
+
+//Comment Now
+const cmtNow = document.getElementById("cmt-now");
 mainForm.addEventListener('submit', (e) => {
     let stringSave="";
     e.preventDefault();
     const comment = mainForm.comment.value;
-    cmtUser.innerHTML += `
+    cmtNow.innerHTML += `
     <div class="box-u-cmt">
     <img src="${arrUser[0].img}" class="img-comment">
     <a class="name-user-cmt">${arrUser[0].name}</a>
@@ -106,7 +152,27 @@ mainForm.addEventListener('submit', (e) => {
 })
 
 
-//
+//Cick mon duoi cung
+picNew.addEventListener('click', async (event)=> {
+    const response = await fetch(`https://5f389e0141c94900169bfe8b.mockapi.io/api/v1/Foods`);
+    const data = await response.json();
+    const nameRec = event.target.innerText;
+    var rs = false;
+    for(let i = 0; i < data.length; i++){
+        if(nameRec == data[i].name){
+            localStorage.setItem('id',i);
+            rs = true;
+            break;
+        }
+        else localStorage.removeItem('id');
+    }
+    if(rs === true){
+        assign();
+    }
+})
+function assign(){
+    window.location.assign('detail.html');
+}
 
 
 //Hiện tab câu gửi câu hỏi
@@ -126,9 +192,9 @@ cl.onclick = function() {
 
 
 //KB
-var kb = document.getElementsByClassName("kb")[0];
+
 var modalAddUser = document.getElementById("myModal-2");
-kb.onclick = function() {
+function addFr() {
     modalAddUser.style.display = "block";
 }
 
@@ -138,4 +204,18 @@ window.onclick = function() {
     }
 }
 
-//
+//Chuyển màn tạo món
+function creatRec() {
+    window.location.assign("./index.html");
+}
+
+//Tìm kiếm món ăn
+function pageChange(){
+    window.location.assign("food.html");
+}
+
+// const searchForm = document.getElementById("searchForm");
+// searchForm.addEventListener('submit', ()=> {
+//     const value = searchForm.searchTwo.value;
+//      localStorage.setItem('value',value);    
+// })

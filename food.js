@@ -1,187 +1,79 @@
 
-const foodData = [
-
-
-
-
-    {
-        name: "Bánh tôm hùm Luke",
-        description: "Đây là bánh cuốn",
-        img: "./cook/b.jpg",
-    },
-    
-    {
-        name: "Bánh bông lan Castella",
-        description: "Đây là bánh cuốn",
-        img: "./cook/n.jpg"
-    },
-    
-    
-    {
-        name: "Khoai tây mật ong",
-        description: "Đây là bánh cuốn",
-        img: "./cook/b.jpg"
-    },
-    
-    
-    {
-        name: "Súp bí đỏ",
-        description: "Đây là bánh cuốn",
-        img: "./cook/bi.jpg"
-    },
-    
-    
-    {
-        name: "Blackberry Pana Cotta",
-        description: "Đây là bánh cuốn",
-        img: "./cook/image.jpg"
-    },
-    
-    
-    {
-        name: "Kem đào + berry",
-        description: "Đây là bánh cuốn",
-        img: "./cook/ras.jpg"
-    },
-    
-    
-    
-    {
-        name: "Súp rau củ",
-        description: "Đây là bánh cuốn",
-        img: "./cook/bina.jpg"
-    },
-    
-    
-    
-    {
-        name: "Chocolate nama",
-        description: "Đây là bánh cuốn",
-        img: "./cook/n.jpg"
-    },
-    
-    
-    {
-        name: "Mỳ Udon",
-        description: "Đây là bánh cuốn",
-        img: "./cook/u.jpg"
-    },
-    
-    
-    {
-        name: "Khoai lang phomai",
-        description: "Đây là bánh cuốn",
-        img: "./cook/w.jpg"
-    },
-    
-    
-    {
-        name: "Bánh mochi matcha",
-        description: "Đây là bánh cuốn",
-        img: "./cook/mochi.jpg"
-    },
-    
-    
-    {
-        name: "Bánh bạch tuộc",
-        description: "Đây là bánh cuốn",
-        img: "./cook/m.png"
-    },
-    
-    
-    {
-        name: "Xôi cốm hạt sen",
-        description: "Đây là bánh cuốn",
-        img: "./cook/xoi.jpg",
-    },
-    
-    
-    {
-        name: "Cánh gà chiên bơ tỏi",
-        description: "Đây là bánh cuốn",
-        img: "./cook/ga.jpg",
-        
-    },
-    
-
-];
-
-
-
 var body = document.getElementById("body");
-
-function renderFood(foods){
-    body.innerHTML=''
-    for(let i = 0;i<foods.length;i++){
-        body.innerHTML+= `
-        <div class='body_wrapper'>
-            
-        <div class = 'body_wrapper_content' id ="clickChange">
-            <h2 >${foods[i].name}</h2>
-            <p>${foods[i].description}</p>
-        </div>
-
-        <div>  <img src="${foods[i].img}" alt=""> </div> 
-    </div>`
+//So sánh name sau đó gán key 'id' trên local = vị trí
+body.addEventListener('click',async (event) => {
+    const response = await fetch(`https://5f389e0141c94900169bfe8b.mockapi.io/api/v1/Foods`);
+    const data = await response.json();
+    const nameFood = event.target.innerText;
+    for(let i = 0; i < data.length; i++){
+        if(nameFood == data[i].name){
+            localStorage.setItem('id',i);
+        }
     }
-}
-renderFood(foodData)
+    testCha();
+})
+//
 
 
 
 
-
-
-// Search
-
+// Search từ màn search
 var searchForm = document.getElementById("searchForm");
-searchForm.addEventListener('submit',(e)=> {
+searchForm.addEventListener('submit', async (e)=> {
     e.preventDefault();
+    const response = await fetch(`https://5f389e0141c94900169bfe8b.mockapi.io/api/v1/Foods`);
+    const data = await response.json();
     const name = searchForm.search.value;
     var searchResult = [];
-    for(let i = 0;i<foodData.length;i++){
-        if(foodData[i].name.includes(name)){
-            searchResult.push(foodData[i]);
+    for(let i = 0;i<data.length;i++){
+        const nameSe = data[i].name.toUpperCase();
+        if(nameSe.includes(name.toUpperCase())){
+            searchResult.push(data[i]);
         }
     }
     renderFood(searchResult);
 })
 
+//Search từ màn home
 var getValue = localStorage.getItem('value');
-function search(getValue){
-
+async function search(getValue){
+    const response = await fetch(`https://5f389e0141c94900169bfe8b.mockapi.io/api/v1/Foods`);
+    const data = await response.json();
     var searchResult = [];
-        for(let i = 0;i<foodData.length;i++){
-            if(foodData[i].name.includes(getValue)){
-                searchResult.push(foodData[i]);
+        for(let i = 0;i<data.length;i++){
+            const name = data[i].name.toUpperCase();
+            if(name.includes(getValue)){
+                searchResult.push(data[i]);
             }
         }
         renderFood(searchResult);
-        if   (searchResult[0].name.indexOf("Cánh") > - 1){
-  
-            var setId = localStorage.setItem("id", 0);
-         }
-         if (searchResult[0].name.indexOf("Xôi") > - 1){
-  
-            var setId = localStorage.setItem("id", 1);
-         }else if (searchResult[0].name.indexOf("Beef") > - 1){
-            var setId = localStorage.setItem("id", 2);
-         }
          
 }
 search(getValue);
 
-var clickChange = document.getElementById('clickChange');
+//Hiển thị kết quả search
+function renderFood(searchResult){
+    body.innerHTML=''
+    for(let i = 0;i<searchResult.length;i++){
+        body.innerHTML+= `
+        <div class='body_wrapper'>
+            
+        <div class = 'body_wrapper_content'>
+            <h2 class="blu-name">${searchResult[i].name}</h2>
+            <p class="blu-tit">${searchResult[i].tits}</p>
+        </div>
 
-clickChange.addEventListener("click", () => {
+        <div>  <img src="${searchResult[i].img}" alt=""> </div> 
+    </div>`
+    }
+}
+renderFood(searchResult);
+
+
+//Chuyển trang
+function testCha(){
     window.location.assign('detail.html');
-})
-
-
-
-
-
-
+}
 
 
 

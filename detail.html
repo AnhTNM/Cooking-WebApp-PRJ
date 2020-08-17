@@ -16,48 +16,31 @@
 
 <body>
     <!-- Header -->
-    <header id="header" class="shadow-sm sticky">
-        <div class="main-header">
-            <div class="header-logo cs-p">
-                <img src="./cook/re.png" class="icon-logo" alt="">
-                <span class="text-logo">Foodie Recipes</span>
-            </div>
-            <form action="" class="header-search">
-                <div class="search-box">
-                <input type="text" name="box" class="input-search" placeholder="Tên món, nguyên liệu, bạn bếp, chủ đề,...">
-                <button class="btn-search cs-p" title="Tìm kiếm" type="submit">
-                    <i class="fas fa-fire-alt"></i>
-                </button>
-            </div>
-            </form>
-            <div class="header-controls">
-                <div class="ct cs-p">
-                    <a class="header-controls-links">
-                        <span class="text-fun">Khám phá</span>
-                        <i class="fas fa-utensils"></i>
-                    </a>
-                </div>
-                <div class="ct cs-p">
-                    <a  class="header-controls-links">
-                        <span class="text-fun">Viết món mới</span>
-                        <i class="fas fa-plus-circle"></i>
-                    </a>
-                </div>
-                <div class="ct cs-p">
-                    <a  class="header-controls-links">
-                        <span class="text-fun">Chọn món</span>
-                        <i class="far fa-comment-alt"></i>
-                    </a>
-                </div>
-                <div class="ct cs-p">
-                    <a  class="header-controls-links">
-                        <span class="text-fun">doanvu111</span>
-                        <i class="fas fa-person-booth"></i>
-                    </a>
-                </div>
-            </div>
+    <div id='left' class="sticky"> 
+    <div class='head'>
+        <a class='logo' href='./home.html'><img style="height: 4rem;" src="./cook/re.png"></a>
+        <form id = "searchForm" class='search_wrapper'>
+            <input id = "searchInput" class='search_wrapper_input' placeholder="Tên món ăn, nguyên liệu ..." name="searchTwo" type="text">
+            <button onclick="pageChange()" type = 'submit' id="btn-sea"> <i class="fas fa-search"> </i></button>
+        </form>
+
+        <div class='head_content'>
+            <span class='mymenu'>1</span>
+            <a class="cs-p">Thực đơn của tôi</a>
         </div>
-    </header>
+
+        <div class='head_content'>
+            <i class="fas fa-pencil-alt"></i>
+            <a onclick="creatRec()" class="non-underline cs-p">Viết món mới</a>
+        </div>
+
+        <div class='head_content'>
+            <i class="fas fa-user-check"></i>
+            <a  id="signin" class="cs-p">Đăng nhập</a>
+        </div>
+
+    </div>
+</div>
 
     <!-- Main -->
     <div class="main-ic sticky-1">
@@ -97,15 +80,8 @@
             
 
             <!-- User -->
-            <div class="user pd">
-                <img src="https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-1/c0.326.960.960a/p960x960/93674913_2565426793723959_6791824006426132480_o.jpg?_nc_cat=100&_nc_sid=dbb9e7&_nc_ohc=bP1fo7nXKIoAX9JeHsm&_nc_ht=scontent-hkt1-1.xx&oh=6abfff71ddd517e801b5cd807c04cbd8&oe=5F54CF2E" class="user-img" alt="">
-                <div>
-                    <p class="name-user">Ánh Phùng</p>
-                <span class="in">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Phu Tho City
-                </span>
-            </div>
+            <div class="user pd" id="user-up">
+                
             </div>
             <hr>
             <div id="time"> </div>
@@ -141,11 +117,9 @@
 
             <!-- Add-rec -->
             <div class="page-user pd">
-                <img src="https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-1/c0.326.960.960a/p960x960/93674913_2565426793723959_6791824006426132480_o.jpg?_nc_cat=100&_nc_sid=dbb9e7&_nc_ohc=bP1fo7nXKIoAX9JeHsm&_nc_ht=scontent-hkt1-1.xx&oh=6abfff71ddd517e801b5cd807c04cbd8&oe=5F54CF2E" class="user-img" alt="">
-                <a class="p-txt">Lên sóng bởi</a>
-                <div class="name-user-2">Ánh Phùng</div>
-                <a class="p-txt">vào 1 tháng 8 năm 2020</a>
-                <div class="kb cs-p">Kết bạn bếp</div>
+                <div id="page-user2">
+                     
+                </div>
                 <div id="myModal-2" class="modal">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -171,7 +145,8 @@
                         </div>
                     </form>
                 </div>
-                <div id="in-cmt-user" class="pd"></div>
+                <div id="cmt-now" class="pd3"></div>
+                <div id="in-cmt-user" class="pd3"></div>
             </div>
             <hr>
 
@@ -222,52 +197,8 @@
                 <div class="name-new-rec">
                     <p class="p-new ft">Món mới của Lê Ly</p>
                 </div>
-                <div class="main-pic">
-                <div class='pic-new'>
-                    <img class = 'pic_img'src="./cook/n.jpg" alt="">
-                    <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
-                    <div class="txt-new">
-                        <h3>Bông lan Castella</h3>
-                        <div><p>Time: 7.pm - 8.pm </p></div>
-                        <div><p>Always Fresh</p></div>
-                    </div>
-                    <div class="reaction">
-                        <i class="fas fa-comment"></i>
-                        <a>0</a>
-                        <i class="fas fa-heart"></i>
-                        <a>0</a>
-                    </div>
-                </div>
-                <div class='pic-new'>
-                    <img class = 'pic_img'src="https://img-global.cpcdn.com/recipes/304b9280d1231d76/751x532cq70/banh-muffins-m%E1%BA%B7n-recipe-main-photo.jpg" alt="">
-                    <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
-                    <div class="txt-new">
-                        <h3>Bánh muffins mặn</h3>
-                        <div><p>Time: 7.pm - 8.pm </p></div>
-                        <div><p>Always Fresh</p></div>
-                    </div>
-                    <div class="reaction">
-                        <i class="fas fa-comment"></i>
-                        <a>0</a>
-                        <i class="fas fa-heart"></i>
-                        <a>0</a>
-                    </div>
-                </div>
-                <div class='pic-new'>
-                    <img class = 'pic_img'src="https://img-global.cpcdn.com/recipes/350ca849531c9822/400sq70/photo.jpg" alt="">
-                    <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
-                    <div class="txt-new">
-                        <h3>Cà phê dừa</h3>
-                        <div><p>Time: 7.pm - 8.pm </p></div>
-                        <div><p>Always Fresh</p></div>
-                    </div>
-                    <div class="reaction">
-                        <i class="fas fa-comment"></i>
-                        <a>0</a>
-                        <i class="fas fa-heart"></i>
-                        <a>0</a>
-                    </div>
-                </div>
+                <div class="main-pic" id="pic-new2">
+               
             </div>
             </div>
             <div class="rec-tag" style="width: 100%; height: 100px;">

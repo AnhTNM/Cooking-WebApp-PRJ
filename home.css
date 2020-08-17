@@ -350,6 +350,15 @@
     color:rgb(121, 120, 120);  
 }
 
+.nameHome {
+    color: #000;
+    transition: linear;
+    font-size:1.6rem;
+}
+
+.nameHome:hover {
+    color: rgb(180, 174, 212);
+}
 
 
 

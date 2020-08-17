@@ -11,7 +11,7 @@
 .sticky-1 {
     position: -webkit-sticky;
     position: sticky;
-    top: 70px;
+    top: 2.5rem;
 }
 
 #main-container {
@@ -166,7 +166,7 @@ font-family: 'Roboto Slab', serif;
 .main-comment {
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .comment {
     display: flex;
@@ -346,7 +346,7 @@ font-family: 'Roboto Slab', serif;
     width: 100%;
     height: auto;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .comm {
@@ -421,6 +421,7 @@ font-family: 'Roboto Slab', serif;
 
 
 .txt-new{
+    height: 120px;
     font-size: 18px;
     text-align: center;
     color: rgb(46, 46, 46); 
@@ -574,3 +575,28 @@ body{
     margin-left: 290px;
 }
 
+#page-user2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    line-height: 30px;
+    font-size: 1.2rem;
+}
+
+.pd3 {
+    padding-left: 18px;
+}
+
+.name33 {
+    margin-bottom: 20px;
+    height: 60px;
+}
+.name33:hover {
+    color: rgb(180, 174, 212);
+}
+.name44 {
+    height: 60px;
+    margin-top: 20px;
+}
