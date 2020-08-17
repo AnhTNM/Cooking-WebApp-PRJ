@@ -2,13 +2,13 @@ const bodyEl = document.getElementById("body1")
 const foodData = [{
     name: "Bánh tôm hùm Luke",
     description: "Banh Tom Hum Lake",
-    img: "../cook/b.jpg"
+    img: "./cook/b.jpg"
 },
 
 {
     name: "Bánh bông lan Castella",
     description: "Đây là bánh cuốn",
-    img: "../cook/n.jpg"
+    img: "./cook/n.jpg"
 },
 
 
@@ -87,7 +87,7 @@ const foodData = [{
 {
     name: "Xôi cốm hạt sen",
     description: "Đây là bánh cuốn",
-    img: "./cook/xoi-com.jpg"
+    img: "./cook/xoi.jpg"
 },
 
 
@@ -109,7 +109,7 @@ const foodData = [{
 
 
 
-const onclickReaction = () => {
+const onclickReaction = (e) => {
     console.log("3")
 
 }

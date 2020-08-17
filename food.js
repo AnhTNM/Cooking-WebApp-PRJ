@@ -92,7 +92,7 @@ const foodData = [
     {
         name: "Xôi cốm hạt sen",
         description: "Đây là bánh cuốn",
-        img: "./cook/xoingon.jpg",
+        img: "./cook/xoi.jpg",
     },
     
     
