@@ -105,6 +105,8 @@
 }
 
 .search_wrapper .btn{
+    cursor: pointer;
+    outline: none;
     width:136px;
     height:45px;
     background-color: rgb(255,153,51);

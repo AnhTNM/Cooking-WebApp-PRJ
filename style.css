@@ -8,6 +8,10 @@
     width:100vw ;
     height: auto;
 }
+.container_form{
+    position:sticky;
+    top: 0;
+}
 .container_form-header-search{
     display: flex;
     flex-direction: row;
@@ -69,8 +73,12 @@
     cursor: pointer;
 }
 .container_form-header-addRemove > p {
+   
     margin-left: 30px;
 }
+.container_form-header-addRemove > div > button{
+    font-size: 19px;
+} 
 .img{
     width: 600px;
     margin-bottom: 15px;
@@ -86,6 +94,10 @@
     margin-bottom: 20px;
     cursor: pointer;
 
+}
+.non-underline{
+    text-decoration:none;
+    color: rgb(147, 146, 144);
 }
 @media screen and (max-width:375px){
     .container_form{
