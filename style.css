@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+#container{
+    width:100vw ;
+    height: auto;
+}
+.container_form-header-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 0 5px black;
+    background-color:rgb(73, 154, 246);
+    position: sticky;
+    top: 0;
+}
+.container_form-header-search-food-logo > img{
+    width: 100px;
+    margin-bottom: 2px;
+}
+.container_form-header-search-food ,.container_form-header-addRemove{
+    display: flex;    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container_creat-form-input-people > div > p , .container_creat-form-input-time > div >p{
+    font-size: 20px;
+}
+.container_form-header-search-food-input > input{
+    width: 400px;
+    height: 40px;
+    border: none;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    z-index: 2;
+    padding-left: 30px;
+    outline: none  ;
+    margin-left: 20px;
+    font-size : 20px;
+}
+.container_form-header-search-food-button > button {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    border-radius: 20px;
+    background-color:seagreen;
+    margin-left: 20px;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+.container_form-header-addRemove{
+    margin-right: 150px;
+}
+.container_form-header-addRemove > div > button {
+    width:100px ;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: seagreen;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+.container_form-header-addRemove > p {
+    margin-left: 30px;
+}
+.img{
+    width: 600px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+.button-img{
+    font-size: 20px;
+    color: #cccccc;
+    outline: none;
+    border: none;
+    margin-left: 610px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+@media screen and (max-width:375px){
+    .container_form{
+        display: none;
+    }
+    .button-img{
+        display: block;
+    }
+    .container_creat-form-input-people , .container_creat-form-input-time{
+        display: flex;
+        flex-direction: column;
+    }
+    .container_creat-form-img{
+        max-width: 375px;
+        padding-bottom: 70px;
+    }
+}

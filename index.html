@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/aeafc74a1b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="input-form.css">
+</head>
+<body>
+<div id="container">
+    <div class="container_form">
+        <div class="container_form-header">
+            <div class="container_form-header-search">
+                <div class="container_form-header-search-food">
+                    <div class="container_form-header-search-food-logo">
+                        <p><a href="./home.html"  style="color:red;text-decoration: none; font-size: 45px;
+                            color:rgb(182, 27, 52);
+                            font-family: 'Gochi Hand', cursive;">Foodie Recipes</a> </p>
+                    </div>
+                    <div class="container_form-header-search-food-input">
+                        <input type="text" placeholder="Tên món , nguyên liệu , bạn bếp , chủ đề" >
+                    </div>
+                    <div class="container_form-header-search-food-button">
+                        <button style="background-color: rgb(255,153,51);" class="button-search"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="container_form-header-addRemove">
+                    <div><button id="save-data" style="background-color: rgb(255,153,51) ;">Lên Sóng</button></div>
+                    <p onclick="myFunction()" value="Reset form" style="font-size: 30px ; color:rgb(255,153,51);cursor: pointer;"><i class="fas fa-backspace"> </i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_creat">
+        <div class="container_creat-form">
+           <div class="container-fix">
+            <div class="container_creat-form-img">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fas fa-camera-retro" style="font-size:50px ;">
+                        <p style="font-size:20px;padding-top: 10px;">Truyền cảm hứng nấu ăn của bạn đến mọi người nào!</p></i>
+                </label>
+                <input id="file-upload" type="file" onchange="encodeImageFileAsURL(this)" />
+            </div>
+            <div class="container_creat-form-input">
+                <div class="container_creat-form-input">
+                    <div id="add-img">
+
+                    </div> 
+                    <div class="container_creat-form-inputtitle" >
+                        <div class="container_creat-form-input-name">
+                        <input type="text" placeholder="Tên món này là" id="name">
+                    </div>
+                    <div class="container_creat-form-input-inspired">
+                        <input type="text" placeholder="Hãy chia sẻ với mọi người về món này" id="share-food">
+                    </div>
+                    <div class="container_creat-form-input-people">
+                        <div><p>Khẩu Phần</p></div>
+                        <input type="number" placeholder="2 người" id="people-food">
+                    </div>
+                    <div class="container_creat-form-input-time">
+                        <div><p>Thời Gian</p></div>
+                        <input type="text" placeholder="1 giờ 30 phút" id="time-food">
+                    </div>
+                    </div>
+                    <div class="container_creat-form-info-material">
+                        <div><H3 style="font-size:25px">Nguyên liệu</H3></div>
+                        <div id="material">
+                            <div class="container_creat-form-info-material-inputone">
+                                <input type="text" placeholder="250gr bột" id="ingredient-food">
+                                <button onclick="delete_item(this)"><i class="fas fa-trash"></i></button>
+                            </div>
+                            <div class="container_creat-form-info-material-inputtwo">
+                                <input type="text" placeholder="100gr đường" id="ingredient-food">
+                                <button onclick="delete_item(this)"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="container_creat-form-info-material_addone">
+                                <button id="add-material"><i class="fas fa-plus"></i> Nguyên Liệu</button>
+                        </div>
+                    </div>
+                    <div class="container_creat-form-info-step">
+                        <div><H3 style="font-size: 25px;">Các Bước</H3></div>
+                        <div>
+                            <ol id="add-step">
+                                <li id="li">
+                                    <input type="text"  class="input-step" placeholder="Trộn Bột đến..." id="step-food">
+                                    <button onclick="delete_item(this)"><i class="fas fa-trash"></i></button>
+                                </li>
+                                <li id="li">
+                                    <input type="text" class="input-step" placeholder="Đảo đều..." id="step-food">
+                                    <button onclick="delete_item(this)"><i class="fas fa-trash"></i></button>
+                                </li>
+                            </ol>
+                        </div> 
+                        <div>
+                            <button id="new-step"><i class="fas fa-plus"></i> BƯỚC LÀM</button>
+                        </div>
+                    </div>
+                    <div style="width : 100vw">
+                        <div class="container_form-header-addRemove button-footer" >
+                            <div><button id="save-data">Lên Sóng</button></div>
+                            <p onclick="myFunction()" value="Reset form" style="font-size: 30px ; color: seagreen;cursor: pointer;"><i class="fas fa-backspace"> </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+          
+        </div>
+        
+    </div>
+</div>
+ 
+
+<script src="./app.js"></script>
+</body>
+</html>
