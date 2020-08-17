@@ -13,7 +13,7 @@ var data = [
   "Mực Xào Cần Tây", 
   "Thịt Lợn Luộc" 
 ]; 
-
+console.log("asdas");
 function search(value){
     document.getElementById("datalist-food").innerHTML = "";
        
