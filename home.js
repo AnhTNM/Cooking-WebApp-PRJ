@@ -1,14 +1,14 @@
 const bodyEl = document.getElementById("body1")
 const foodData = [{
     name: "Bánh tôm hùm Luke",
-    description: "Đây là bánh cuốn",
-    img: "./cook/b.jpg"
+    description: "Banh Tom Hum Lake",
+    img: "../cook/b.jpg"
 },
 
 {
     name: "Bánh bông lan Castella",
     description: "Đây là bánh cuốn",
-    img: "./cook/n.jpg"
+    img: "../cook/n.jpg"
 },
 
 
@@ -22,7 +22,7 @@ const foodData = [{
 {
     name: "Súp bí đỏ",
     description: "Đây là bánh cuốn",
-    img: "./cook/bi.jpg"
+    img: "../cook/bi.jpg"
 },
 
 
@@ -160,9 +160,6 @@ function renderFood(){
 
 renderFood()
 
-console.log("ádsa");
-
-
 // Chuyển hướng
 function pageChange(){
     window.location.assign('food.html');
@@ -182,3 +179,5 @@ btn.addEventListener('click', ()=> {
      pageChange();
      
     })
+
+// creat new FOOD 
