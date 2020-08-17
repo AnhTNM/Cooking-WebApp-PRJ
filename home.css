@@ -1,0 +1,354 @@
+﻿
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: calibri;
+    
+}
+
+
+
+/* Heading */
+
+
+@media screen and (max-width: 600px) {
+    .head_content {
+         visibility: hidden;
+        }
+      
+        .head_content .fas fa-bars{
+            visibility: visible;
+           }
+      }
+
+.head{
+    width: 100%;
+    position:fixed;
+    display:flex;
+    align-items: center;
+    background-color: rgb(73, 154, 246);
+    z-index: 2;
+    box-shadow: 2px 2px 2px rgb(184, 184, 184);
+
+}
+
+.head .fas{
+    color: white;
+}
+
+
+.head_content{
+    padding:15px;
+    font-size: 20px;
+    color:white;
+    cursor: pointer;
+    white-space: nowrap;
+
+}
+
+/* Hình tròn ở Thực đơn của tôi */
+
+#mymenu{
+    border:1px solid white;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.8em;
+
+    padding: 3px 7px;
+    text-align: center;
+}
+
+
+/* Logo */
+#logo{
+    width:500px;
+    margin:auto;
+    display:flex;
+    align-items: center;
+    padding-top:7%;
+
+    
+}
+
+.Foodie_Recipes{
+    font-size: 45px;
+    color:rgb(182, 27, 52);
+    font-family: 'Gochi Hand', cursive;
+    position:relative;
+    margin-left: -15px;
+   
+}
+
+/* Tìm kiếm */
+
+.search_wrapper{
+    
+    margin-left:30%;
+    margin-right:30%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(255,153,51);
+    
+}
+
+.search_wrapper .input{
+    width:300px;
+    height:45px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    padding-left: 10px; 
+    
+}
+
+.search_wrapper .btn{
+    width:136px;
+    height:45px;
+    background-color: rgb(255,153,51);
+    color:white;
+    border: none;
+    border-radius: 8px;
+    margin-right:2%;
+    margin-top:1%;
+    margin-bottom:1%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+     
+}
+
+.search_wrapper .fas{
+    font-size: 25px;
+    margin-left: 15px; 
+}
+
+
+/* Top trending */
+
+
+@media screen and (max-width: 600px) {
+    .trend{
+        display: flex;
+        flex-direction: column;  
+    }
+
+    .trend{
+        row-gap: 5px;
+    }
+}
+
+.trend{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    display:flex;
+    justify-content: space-between;
+    cursor: pointer;
+        
+}
+
+
+.TopTrending{
+    font-size: 18px;
+    color: rgb(74,74,74); 
+    font-weight: bolder;
+    
+}
+
+
+.Top_trending{
+    color:rgb(87,120,215);
+    font-size: 18px;
+    font-weight: bolder;
+    border:1px solid rgba(187, 186, 186, 0.6);
+    border-radius: 8px;
+    padding:2px;
+      
+}
+
+
+
+@media screen and (max-width: 600px) {
+.pic {
+     width: 100%;
+  
+    }
+  }
+
+
+
+#body1{
+    
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(270px, 1fr));
+    margin-top:3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom:200px;
+    grid-gap:3%;
+  
+}
+
+
+.pic{
+ 
+    box-shadow: 2px 2px 3px rgb(165, 165, 165);
+    border-radius: 10px; 
+    height:410px;
+
+}
+
+#pic_anh{
+   height: 50%;
+
+}
+
+
+       
+#pic_anh img{
+    
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.pic_anh_add{
+    position:absolute; 
+       margin-bottom: 10px;
+       background-color: rgba(0, 0, 0, 0.52);
+       border-radius: 50px;
+       color: white;
+       border: 0.5px solid white;
+       font-size: 0.7em;
+       padding:0.5%;
+       margin-left:0.5%;
+       margin-top:-3%;
+    }
+    
+    
+
+.pic_txt{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(46, 46, 46); 
+    cursor: pointer;
+    
+}
+
+.reaction{
+    position: relative;
+    bottom:-22%;
+    left:65%;
+    letter-spacing: 2px;
+    color: rgb(95, 95, 95); 
+    
+}
+
+.reaction .fas{
+    color: rgb(172, 172, 172); 
+    font-size: 20px;
+}
+
+
+.signin_container{
+    background-color: white;
+    border-radius: 8px;
+    display:flex;
+    position:fixed;
+    top:7%;
+    left: 25%;
+    right:25%;
+    z-index: 3;
+    display:none;
+}
+
+.signin_wrapper{
+    display:flex;
+    flex-direction: column;
+    margin:auto;     
+}
+
+.signin_title{
+    font-size: 25px;
+    text-align:center;
+}
+
+.signin_input{
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+    border:none;
+    border-bottom: 0.5px solid rgb(121, 120, 120); 
+    outline: none;
+}
+.signin_content{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.signin_btn{
+    width: 60%;
+    height: 2em;
+    margin: auto;
+    margin-top: 40px;
+    background-color: rgb(103, 134, 224);
+    border-radius: 25px;
+    outline: none;
+    border:none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 5px 5px 5px #666;
+
+}
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 3;
+    display: none;
+    position: fixed;
+}
+
+.menu{
+    margin-right: auto;
+    height:inherit;
+   
+    
+}
+
+.menu_icon{
+    list-style: none;
+    color: white;height: 70px;
+    height:inherit;
+}
+
+.sub_menu{
+    display:none;
+    font-size: 1.3em;
+    color: white;
+    line-height: 2em;
+    position:absolute;
+    list-style: none;
+    margin-left: 1%;
+
+}
+
+.menu:hover .sub_menu{
+    display:block;
+    color:rgb(121, 120, 120);  
+}
+
+
+
+
+

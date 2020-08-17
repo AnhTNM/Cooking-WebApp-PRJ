@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div>
+
+<div class="overlay"></div>
+
+    
+
+    <div class='head'>
+
+     
+        
+        <div class ='menu'>
+                <!-- <div class = 'head_content'><i class="fas fa-bars"></i></div> -->
+                <div class = 'head_content'><i class="fas fa-bars"></i></div>
+                <ul class = 'sub_menu'> 
+                        <li><a>Thực đơn của tôi<a href=""></a></li>
+                        <li><a> Viết món mới</a></li>
+                        <li><a >Đăng nhập</a></li>
+                    </ul>
+                </ul>
+               
+        </div>
+            
+
+
+        
+           
+       
+
+        <div class= 'head_content'>
+            <span id = 'mymenu'>1</span>
+            <a>Thực đơn của tôi</a>
+        </div>
+
+        <div class = 'head_content'>
+            <i class="fas fa-pencil-alt"></i>
+            <a>Viết món mới</a>
+        </div>
+        
+        <div class = 'head_content'>
+            <i class="fas fa-user-check"></i>
+            <a id = "signin">Đăng nhập</a>
+        </div>
+        
+    </div>
+    <!-- Logo -->
+
+    <div id='logo'>
+        <div> <img style ="width:200px;" src="./cook/re.png" alt=""></div>
+        <div><h3 class = 'Foodie_Recipes'>Foodie Recipes</h3> </div>
+        
+    </div>
+
+
+    <!-- Search -->
+    <div class='search_wrapper'>
+        <i class="fas fa-utensils"></i>
+        <input id="inp" class='input' placeholder="Tên món ăn, nguyên liệu ..." type="text" name="input1">
+        <button class='btn' id="btn"></button>Tìm kiếm</button>
+    </div>
+
+<!-- Top trending -->
+    <div class='trend'>
+        <a class = TopTrending>TOP TRENDING</a>
+        <a class='Top_trending'>#bánh trung thu</a>
+        <a class='Top_trending'>#khoai nướng phomai</a>
+        <a class='Top_trending'>#bánh trứng tart</a>
+        <a class='Top_trending'>#tôm hùm Luke</a>
+        <a class='Top_trending'>#socola nama</a>
+    </div>
+
+    
+    <div id ="main" class='main-full'>
+
+
+
+    <div id='body1'>
+
+
+</div>
+
+
+<!-- signin -->
+        <div class ="signin_container">
+            <div><img style="width:350px;height:525px;border-top-left-radius:8px;border-bottom-left-radius:8px;" src="./cook/lemon.jpg" alt=""></div>
+            <form class ="signin_wrapper" action="">
+               <h3 class="signin_title">Wellcome</h3>
+               <a class = 'signin_content'>Username</a>
+               <input class = "signin_input" placeholder="Enter username" type="text">
+               <a class = 'signin_content'> Password</a>
+               <div>
+                
+                <input class = "signin_input" placeholder="Enter password" type="password">
+               </div>
+               
+               <button class = "signin_btn">SIGN IN</button>
+            </form>       
+        </div>
+
+
+    </div>
+
+<script src = 'home.js'></script>
+  
+
+
+
+    <script>
+
+        // login
+    document.getElementById('signin').addEventListener('click',function(){
+    document.querySelector(".signin_container").style.display ="flex";
+    document.querySelector(".overlay").style.display ="flex";
+    })
+
+
+
+
+    // reaction
+    function click(e){
+        let number = document.getElementById("number");
+      number.innerHTML = Number(number.innerHTML)+1;
+      console.log(number.innerHTML);
+  }
+
+
+
+
+
+      
+
+
+        // Thêm vào thực đơn
+
+        
+
+    // let pic_anh_add = document.getElementsByClassName("pic_anh_add");
+    // let mymenu.getElementById("mymenu")
+    // pic_anh_add.addEventListener("click",function(){
+    // mymenu.innerText=Number(mymenu.innerText)+1;
+    // console.log(mymenu.innerText);
+    //     })
+
+    
+
+    </script>  
+    
+    
+
+</body>
+
+</html>
