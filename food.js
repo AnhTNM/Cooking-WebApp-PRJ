@@ -92,8 +92,7 @@ const foodData = [
     {
         name: "Xôi cốm hạt sen",
         description: "Đây là bánh cuốn",
-        img: "./cook/xoi-com.jpg",
-        id : 2
+        img: "./cook/xoingon.jpg",
     },
     
     
@@ -101,7 +100,7 @@ const foodData = [
         name: "Cánh gà chiên bơ tỏi",
         description: "Đây là bánh cuốn",
         img: "./cook/ga.jpg",
-        id : 0,
+        
     },
     
 
