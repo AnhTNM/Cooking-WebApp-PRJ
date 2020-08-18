@@ -67,7 +67,6 @@ function renderFood(searchResult){
     </div>`
     }
 }
-renderFood(searchResult);
 
 
 //Chuyển trang

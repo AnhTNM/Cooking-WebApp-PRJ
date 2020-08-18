@@ -23,6 +23,7 @@ const time = document.getElementById("time");
 const userUp = document.getElementById("user-up");
 const userUp2 = document.getElementById("page-user2");
 const picNew = document.getElementById("pic-new2");
+const new22 = document.getElementById("neww2");
 
 
 
@@ -103,6 +104,9 @@ userUp2.innerHTML += ` <img src="${data[n].userImg}" class="user-img" alt="">
          `
         }
     }  
+
+    //
+    new22.innerHTML += `<p class="p-new ft">Món mới của ${data[n].userName}</p>`
 
     //Món khác của USer
     picNew.innerHTML = ``
@@ -214,8 +218,10 @@ function pageChange(){
     window.location.assign("food.html");
 }
 
-// const searchForm = document.getElementById("searchForm");
-// searchForm.addEventListener('submit', ()=> {
-//     const value = searchForm.searchTwo.value;
-//      localStorage.setItem('value',value);    
-// })
+const searchForm = document.getElementById("searchForm");
+searchForm.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    const value = searchForm.searchTwo.value;
+     localStorage.setItem('value',value.toUpperCase()); 
+     pageChange();   
+})
