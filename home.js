@@ -13,11 +13,11 @@ async function renderFood(){
     const data = await response.json();
     bodyEl.innerHTML=""
     for(let i = 0;i<data.length;i++){
-        bodyEl.innerHTML+= `
+        bodyEl.innerHTML += `
         <div class='pic'>
             
             <div id = 'pic_anh'>
-                <img src="${data[i].img}" alt="">
+                <img src="./cook/${data[i].img}" alt="">
             </div>
 
 

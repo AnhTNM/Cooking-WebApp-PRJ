@@ -31,7 +31,7 @@ async function getData(n) {
     const data = await response.json();
     //Anh Big
     const imgBig = data[n].img;
-    titImg.innerHTML += `<img class="tits-img" src="${imgBig}">`;
+    titImg.innerHTML += `<img class="tits-img" src="./cook/${imgBig}">`;
     //Add tên món
     const name = data[n].name;
     nameRec.innerHTML += `<h1 class="name   ">${name}</h1>`;
@@ -111,7 +111,7 @@ userUp2.innerHTML += ` <img src="${data[n].userImg}" class="user-img" alt="">
         if(data[i].userName == checkName && data[i].name != name){
 
             picNew.innerHTML += `<div class='pic-new'>
-            <img class = 'pic_img'src="${data[i].img}" alt="">
+            <img class = 'pic_img'src="./cook/${data[i].img}" alt="">
             <p class = "add-new"><i class="fas fa-utensil-spoon"></i> THÊM VÀO THƯC ĐƠN</p>
             <div class="txt-new">
                 <h3 class="name33 cs-p">${data[i].name}</h3>

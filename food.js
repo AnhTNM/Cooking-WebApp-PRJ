@@ -63,7 +63,7 @@ function renderFood(searchResult){
             <p class="blu-tit">${searchResult[i].tits}</p>
         </div>
 
-        <div>  <img src="${searchResult[i].img}" alt=""> </div> 
+        <div>  <img src="./cook/${searchResult[i].img}" alt=""> </div> 
     </div>`
     }
 }
