@@ -127,5 +127,12 @@ function encodeImageFileAsURL(element) {
 
   //chuyen trang
   function goDetail(e) {
-      window.location.assign("home.html");
-  }
+      var txt; 
+      var r  = confirm("Nhanh lên !! còn một bước nữa thôi là chúng ta có món mới . ?")
+          if (r = true){
+            window.location.assign("home.html");
+          } else {
+              alert("Ố KỀ Làm món ăn thêm chi tiết đi nào !! ")
+          }
+      }
+     
