@@ -38,7 +38,7 @@ let stepFood=document.getElementsByClassName("input-step");
 let ingreFood = document.getElementsByClassName('inGre');
 
 
-//vu
+//Post lên mock
 saveData.addEventListener('click',() => {
         const nameValue = nameFood.value;
         const titsValue = shareinfo.value;
@@ -96,7 +96,8 @@ saveData.addEventListener('click',() => {
         },
         );
         const content = await respone.json();
-        console.log(content);
+        
+        
         goDetail();
     };
 
